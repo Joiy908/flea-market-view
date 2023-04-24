@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        /* set rem = 10px */
+        font-size: 62.5%;
+      }
+
+      /* properties to be inherited */
+      body {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        color: #f7f7f7;
+        /* padding will not be inherited */
+        padding: 0.8rem;
+      }
+    </style>
   </head>
   <body>
     <noscript>
