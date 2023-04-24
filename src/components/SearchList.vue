@@ -1,20 +1,15 @@
 <template>
-  <div id="main">
-    <van-row>
-      <van-col span="20">
-        <form action="/">
-          <van-search
-            class="search-bar"
-            v-model="value"
-            @search="onSearch"
-            shape="round"
-            background="#4fc08d"
-            placeholder="请输入搜索关键词"
-          />
-        </form>
-      </van-col>
-      <van-col span="4"><button style="font-size: large;margin-top: 40%;">icon</button></van-col>
-    </van-row>
+  <div id="search-list">
+    <form action="/">
+      <van-search
+        class="search-bar"
+        v-model="value"
+        @search="onSearch"
+        shape="round"
+        background="#4fc08d"
+        placeholder="请输入搜索关键词"
+      />
+    </form>
     
     <van-list
       v-model="loading"
@@ -53,7 +48,7 @@
 
 import axios from 'axios'
 export default {
-  name: 'Main',
+  name: 'search-list',
   data() {
     return {
       value: "",
@@ -115,23 +110,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
-/* 
-#main {
-  background-color: aquamarine;
-} */
-.search-bar {
-  margin-top: 10px;
-  /* width: 80%; */
-}
-.van-field, .van-icon-search::before, .van-icon-clear{
-  font-size: 1rem;
-}
 
-.van-search__content {
-  height: 1.95rem;
-}
-
-.van-card {
-  font-size: 1rem;
+#search {
+  background-color: #f7f7f7; 
 }
 </style>
