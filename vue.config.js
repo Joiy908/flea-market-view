@@ -11,4 +11,15 @@ module.exports = {
     }
   },
   // lintOnSave: false
+  css: {
+		loaderOptions: {
+			less: {
+				lessOptions: {
+          modifyVars: {
+            hack: `true; @import "@/assets/css/resetVant.less";`,
+          },
+        },
+			},
+		},
+	},
 }
