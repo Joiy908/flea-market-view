@@ -69,7 +69,7 @@ export default {
         try {
           console.log(this.list.length);
           let res = await axios.post(
-            'http://10.228.90.157:8080/query?from='+this.list.length,
+            'http://localhost:8080/query?from='+this.list.length,
             {val: this.value}
           );
           
@@ -96,9 +96,10 @@ export default {
   },
   watch: {
     value() {
-      this.list.length = 0;
+      this.list.length = [];
       this.total = -1;
       this.finished = false;
+      this.loading = true;
     }
   },
   mounted() {

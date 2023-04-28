@@ -18,6 +18,9 @@ export default {
   name: 'App',
   components: {
    SearchList, AddItem
+  },
+  mounted() {
+    this.$router.replace({name: 'index'}, err => {});
   }
 }
 </script>

@@ -8,8 +8,9 @@ import AddItem from '../components/AddItem.vue'
 export default new VueRouter({
     routes:[
         {
-            path:'/index',
-            component: SearchList
+          name: 'index',
+          path:'/index',
+          component: SearchList
         },
         {
           path:'/add',
